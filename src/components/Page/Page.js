@@ -24,7 +24,6 @@ class Page extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
-          <div> SOme new coool text </div>
           <div
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
