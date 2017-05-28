@@ -26,13 +26,23 @@ html {
   font-family: var(--font-family-base);
   line-height: 1.375; /* ~22px */
 }
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+li{
+  list-style-type: none;
+}
 body {
   margin: 0;
 }
 
 a {
-  color: #0074c2;
+  color: #3c3c43;
+  text-decoration: none;
+  padding-bottom: 5px;
+
 }
 
 /*

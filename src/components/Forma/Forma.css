@@ -1,0 +1,64 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+.forma{
+  width: 1100px;
+  margin: 0 auto 160px;
+
+}
+.forma_h3{
+	font-size: 3em;
+	font-family: 'Lora';
+	text-align: center;
+}
+.forma_p{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	font-size: 1.25em;
+	color: #000;
+}
+.connect{
+	width: 500px;
+	margin: 0 auto;
+	display: flex;
+    flex-wrap: wrap;
+}
+.connect input{
+	height: 57px;
+	width: 500px;
+	margin-bottom: 10px;
+	border: 2px solid #4f4f4f;
+	font-weight: medium;
+	color: #4f4f4f;
+	padding-left: 20px;
+}
+.connect textarea{
+	margin-bottom: 25px;
+	padding-top: 15px;
+	border: 2px solid #4f4f4f;
+	font-weight: medium;
+	width: 500px;
+	height: 120px;
+	padding-left: 20px;
+	color: #4f4f4f;
+}
+.connect button{
+	color: #fff;
+	height: 57px;	
+	background-color: #4f4f4f;
+	font-weight: medium;
+	font-size: 1.25em;
+	width: 500px;
+	border: none;
+}
+.connect button: focused,
+.connect textarea: focused{
+	border: none;
+}

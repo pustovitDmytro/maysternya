@@ -10,8 +10,8 @@
 @import '../variables.css';
 
 .root {
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #3c3c43;
 }
 
 .container {
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.text {
+/*.text {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -45,3 +45,4 @@
 .link:hover {
   color: rgba(255, 255, 255, 1);
 }
+*/
