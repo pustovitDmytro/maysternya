@@ -7,46 +7,77 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-.root {
-  float: right;
-  margin: 6px 0 0;
-}
 
-.link {
-  display: inline-block;
-  padding: 3px 8px;
-  text-decoration: none;
-  font-size: 1.125em; /* ~18px */
-}
 
-.link,
-.link:active,
-.link:visited {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.link:hover {
-  color: rgba(255, 255, 255, 1);
-}
-
-.highlight {
-  margin-right: 8px;
-  margin-left: 8px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.15);
-  color: #fff;
-}
-
-.highlight:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.spacer {
-  color: rgba(255, 255, 255, 0.3);
-}
-.redbox{
-  color: red;
+.map{
+  max-width: 1100px;
   margin: 0 auto;
-  width: 400px;
-  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px
+}
+.map_img{
+  width: 660px;
+  display: block;
+}
+.map_img img{
+  width: 100%;
+}
+.map_contact{
+  width: 270px;
+  margin-left: 25px; 
+  margin-top: 5px;
+}
+.map_contact h4{
+  font-family: 'Lora';
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.map_contact_tel{
+  font-size: 1.5em;
+  color: #4f4f4f;
+}
+.map_contact_adress{
+  font-size: 0.9em;
+  color: #4f4f4f;
+  margin-top: 5px;
+}
+
+.map_link{
+  margin-top: 50px;
+  font-size: 1.3em;
+}
+.map_link li{
+  margin-bottom: 12px;
+ }
+
+.map_link li a{
+  margin-bottom: 10px;
+  color: #3c3c43;
+  font-weight: 550;
+  border-bottom: 1px solid #3c3c43;
+}
+
+@media screen and (max-width: 480px){
+  .map{
+  width: 92%;
+  margin: 30px auto 0;
+
+}
+.map_img{
+  display: none;
+}
+.map_contact{
+  margin-left: 0;
+}
+}
+@media screen and (max-width: 800px){
+.map_img{
+  margin: 0 auto;
+}
+.map_contact{
+  margin: 5px auto;
+  text-align: left;
+}
 }

@@ -32,6 +32,14 @@ html {
   font-family: 'Roboto', sans-serif;
   line-height: 1.375; /* ~22px */
 }
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
 :global(.button){
   display: block;
   text-decoration: none;
@@ -42,11 +50,13 @@ html {
 }
 body {
   margin: 0;
-  padding: 10px;
 }
 
 a {
-  color: #0074c2;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 5px;
+
 }
 
 /*
