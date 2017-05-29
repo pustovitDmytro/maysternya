@@ -13,14 +13,12 @@ import Page from '../../components/Page';
 
 export default {
 
-  path: '/new_page',
+  path: '/catalog',
 
   async action() {
-    const data = await require.ensure([], require => require('./about.md'), 'news');
-
-    return {
-      title: data.title,
-      chunk: 'about',
+     return {
+      title: "Каталог Продукції",
+      chunk: 'catalog',
       component: <Layout>
       <div> catalog content	</div>
       </Layout>,

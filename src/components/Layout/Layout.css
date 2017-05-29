@@ -18,17 +18,31 @@
 /*
  * Base styles
  * ========================================================================== */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   color: #222;
   font-weight: 100;
   font-size: 1em; /* ~16px; */
-  font-family: var(--font-family-base);
+  font-family: 'Roboto', sans-serif;
   line-height: 1.375; /* ~22px */
 }
-
+:global(.button){
+  display: block;
+  text-decoration: none;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 40px;
+  color: black;
+}
 body {
   margin: 0;
+  padding: 10px;
 }
 
 a {
