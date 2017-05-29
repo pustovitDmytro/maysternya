@@ -49,5 +49,4 @@ class Forma extends React.Component {
     );
   }
 }
-
 export default withStyles(s)(Forma);

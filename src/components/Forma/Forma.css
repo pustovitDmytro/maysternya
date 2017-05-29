@@ -8,7 +8,7 @@
  */
 
 .forma{
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto 160px;
 
 }
@@ -58,7 +58,24 @@
 	width: 500px;
 	border: none;
 }
-.connect button: focused,
-.connect textarea: focused{
-	border: none;
+@media screen and (max-width: 480px){
+  .forma{
+  width: 92%;
+  margin: 0 auto;
+}
+.connect,
+.connect textarea,
+.connect input,
+.connect button{
+	width: 100%;
+	margin: 10px auto;
+}
+.forma_h3{
+	text-align: left;
+	line-height: 48px;
+}
+.forma_p{
+	text-align: left;
+	padding-bottom: 40px;
+}
 }
