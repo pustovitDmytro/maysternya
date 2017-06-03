@@ -10,30 +10,8 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Small.css';
-import img1 from './img/1.jpg';
-import img2 from './img/2.jpg';
-import img3 from './img/3.jpg';
-import img4 from './img/4.jpg';
+import cx from 'classnames';
 
-const images1 = [{
-  src: img1,
-  alt: "first",
-  link: "./catalog"
-},{
-  src: img2,
-  alt: "Second",
-  link: "./catalog"
-},{
-  src: img3,
-  alt: "third",
-  link: "./catalog"
-}
-];
-const images2=[{
-  src: img4,
-  alt: "big",
-  link: "./catalog"
-}];
 //function returns width of the i-th picture
 let elemW = function(n,i, prob=0.05,kof=1.3){
   if (n==1) return 100;
@@ -43,12 +21,14 @@ let elemW = function(n,i, prob=0.05,kof=1.3){
 class Panel extends React.Component {
   render() {
     return (
+      <div>
       <div className={s.panel}>
         {
           this.props.source.map((elem,i,arr) =>
             <img src={elem.src} alt={elem.alt} style={{width:elemW(arr.length,i)+"%"}}/>
           )
         }
+      </div>
       </div>
     );
   }
@@ -57,9 +37,9 @@ class Panel extends React.Component {
 class Header extends React.Component {
   render() {
     return (
-      <div>
-        <h3 className={s.title}>{this.props.title}</h3>
-        <div className="line"></div>
+      <div className={s.header}>
+        <h3 className={s.title}>{this.props.children}</h3>
+        <hr className={cx(s.line,s.big)}></hr>
       </div>
     );
   }
@@ -68,8 +48,9 @@ class Small extends React.Component {
   render() {
     return (
       <div>
-        <header
-        <Panel source={images1}/>
+        <Header>{this.props.children}</Header>
+        <div className={s.big}><Panel source={this.props.array}/></div>
+        <div className={s.clear}></div>
       </div>
     );
   }

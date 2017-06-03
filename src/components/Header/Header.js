@@ -10,25 +10,25 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
-import Logo from './Logo';
-import BigMenu from './BigMenu';
-import ShortMenu from './ShortMenu';
-import Title from './Title';
+import cx from 'classnames';
+import Link from '../Link'
 
 class Header extends React.Component {
   render() {
     return (
-      <header>
-        <Logo/>
-        <div className={s.mainpart}>
-        <div className={s.big}>
-        <Title/>
-        <ShortMenu/>
+      <div className={s.header}>
+        <h3 className={s.title}>Майстерня</h3>
+        <div>
+          <p className={s.phone}>+38 066 445 59 00</p>
+          <p className={s.addres}>м. Мукачево, вул. Переяславська, 1</p>
         </div>
-          <div className={s.small}>
-        <BigMenu/></div>
-          </div>
-        </header>
+        <Link className={cx(s.button,"button")} to="/contact">Зв’язатись з нами</Link>
+        <div className={s.languages}>
+          <button className={s.lang}>УКР</button>
+          <button className={s.lang}>РУС</button>
+        </div>
+
+      </div>
     );
   }
 }

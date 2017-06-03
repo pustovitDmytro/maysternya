@@ -16,7 +16,7 @@ export default {
   async action() {
     return {
       title: 'Home',
-      component: <Layout><Home/></Layout>
+      component: <Layout isHome={true}><Home/></Layout>
     };
   },
 
