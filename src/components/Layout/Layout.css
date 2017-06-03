@@ -36,6 +36,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 li{
   list-style-type: none;
@@ -48,11 +49,14 @@ li{
   line-height: 40px;
   color: black;
 }
-body {
-  margin: 0;
+:global(.link) {
+  display: block;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
 }
-
-a {
+a{
   color: black;
   text-decoration: none;
   padding-bottom: 5px;

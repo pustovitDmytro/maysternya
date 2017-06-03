@@ -9,7 +9,7 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Page from '../../components/Page';
+import Small from './Small';
 
 export default {
 
@@ -20,7 +20,7 @@ export default {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
-      <div> catalog content	</div>
+      <Small/>
       </Layout>,
     };
   },

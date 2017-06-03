@@ -1,0 +1,14 @@
+.menu{
+  flex-grow: 1;
+}
+.item{
+  padding: 0 10px;
+  flex-grow: 1;
+}
+.Photo{
+  width: 100%;
+}
+.line{
+  display: flex;
+  justify-content: space-between;
+}
