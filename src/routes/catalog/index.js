@@ -34,7 +34,27 @@ const images2=[{
   alt: "big",
   link: "./catalog"
 }];
-
+const images3 = [{
+  src: img1,
+  alt: "Second",
+  link: "./catalog"
+},{
+  src: img3,
+  alt: "third",
+  link: "./catalog"},
+  {src: img1,
+  alt: "first",
+  link: "./catalog"
+},{
+  src: img2,
+  alt: "Second",
+  link: "./catalog"
+},{
+  src: img3,
+  alt: "third",
+  link: "./catalog"
+}
+];
 export default {
 
   path: '/catalog',
@@ -44,7 +64,9 @@ export default {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
-      <Small array={images1}>gaahkjakkfnkfnskdfnskdf sd fsndkfsldjflsdjlfds fsdlfsdlf</Small>
+        <Small array={images3} isFilter={true}>Внутрішнє та зовнішнє оздоблення</Small>
+        <Small array={images1}>Складні архітектурні вироби</Small>
+        <Small array={images2}>Садово паркове мистецтво</Small>
       </Layout>,
     };
   },

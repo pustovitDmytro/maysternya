@@ -18,6 +18,15 @@ let elemW = function(n,i, prob=0.05,kof=1.3){
   return 100*Math.pow(1.3,i)*((kof-1)*(1-prob))/(Math.pow(1.3,n)-1);
 }
 
+class Filter extends React.Component {
+  render() {
+    return (
+      <div className={s.Filter}>
+      </div>
+    );
+  }
+}
+
 class Panel extends React.Component {
   render() {
     return (
@@ -25,7 +34,7 @@ class Panel extends React.Component {
       <div className={s.panel}>
         {
           this.props.source.map((elem,i,arr) =>
-            <img src={elem.src} alt={elem.alt} style={{width:elemW(arr.length,i)+"%"}}/>
+            <img className={cx(s.Photo,"photo")} src={elem.src} alt={elem.alt} style={{width:elemW(arr.length,i)+"%"}}/>
           )
         }
       </div>
@@ -49,12 +58,13 @@ class Small extends React.Component {
     return (
       <div>
         <Header>{this.props.children}</Header>
+        {
+          (this.props.isFilter)?<Filter/>:<div/>
+        }
         <div className={s.big}><Panel source={this.props.array}/></div>
         <div className={s.clear}></div>
       </div>
     );
   }
 }
-
-
 export default withStyles(s)(Small);

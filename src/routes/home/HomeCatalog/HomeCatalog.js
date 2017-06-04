@@ -54,7 +54,7 @@ class Item extends React.Component {
   render() {
     return (
       <div className={s.item}>
-        <img src={this.props.src} alt={this.props.alt} className={s.Photo}/>
+        <img src={this.props.src} alt={this.props.alt} className={cx(s.Photo,"photo")}/>
         <Link to="/catalog" className="link">{this.props.text}</Link>
       </div>
     );
@@ -63,13 +63,13 @@ class Item extends React.Component {
 class Menu extends React.Component {
   render() {
     return (
-      <div>
+      <div className={s.menu}>
         <nav className={s.catalogMenu}>
         <li className={s.list}>Внутрішнє та зовнішнє оздоблення</li>
         <li className={s.list}>Складні архітектурні вироби</li>
         <li className={s.list}>Садово паркове мистецтво</li>
         </nav>
-        <Link to="/catalog" className="button">Каталог</Link>
+        <Link to="/catalog" className={cx(s.button,"button")}>Каталог</Link>
       </div>
     );
   }
@@ -79,8 +79,10 @@ class HomeCatalog extends React.Component {
   render() {
     return (
       <div>
+        <h3 className={s.title}>Каталог продукції</h3>
+      <div className={s.catalog}>
         <div className={s.line}>
-          <Menu className={s.menu}/>
+          <Menu/>
         {
           items.filter(elem=>elem.id<3).map(elem =>
             <Item src={elem.src} alt={elem.alt} text={elem.text}/>
@@ -94,6 +96,7 @@ class HomeCatalog extends React.Component {
             )
           }
         </div>
+      </div>
       </div>
     );
   }

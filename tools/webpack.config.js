@@ -137,6 +137,10 @@ const config = {
         loader: path.resolve(__dirname, './lib/markdown-loader.js'),
       },
       {
+        test: /\.less$/,
+        loader: "css-loader!less-loader",
+      },
+      {
         test: /\.txt$/,
         loader: 'raw-loader',
       },

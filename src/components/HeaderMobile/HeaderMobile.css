@@ -1,0 +1,13 @@
+.title{
+  display: block;
+  width: 45%;
+  font-family: 'Lora', serif;
+  font-size: 36px;
+  font-weight: bold;
+  padding:20px;
+}
+@media screen and (min-device-width: 890px){
+.mobile{
+  display: none;
+}
+}

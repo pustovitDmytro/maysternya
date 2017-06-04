@@ -51,12 +51,32 @@ li{
   line-height: 40px;
   color: black;
 }
+:global(.button:hover){
+  display: block;
+  text-decoration: none;
+  border: 2px solid white;
+  background-color: black;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
 :global(.link) {
   display: block;
   text-decoration: underline;
   font-size: 20px;
   line-height: 1.5;
   color: black;
+}
+:global(.link:hover) {
+  font-weight: bold;
+  text-decoration: none;
+}
+:global(.photo) {
+  cursor: pointer;
+}
+:global(.photo:hover) {
+  transform: translateY(-5px);
+  transition: 0.5s;
 }
 a{
   color: black;

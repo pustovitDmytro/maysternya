@@ -15,6 +15,8 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import normalizeCss from 'normalize.css';
 import s from './Layout.css';
 import Header from '../Header';
+import HeaderMobile from '../HeaderMobile';
+
 import HeaderHome from '../HeaderHome';
 import Footer from '../Footer';
 
@@ -26,6 +28,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
+        <HeaderMobile/>
         {
           (this.props.isHome)?<HeaderHome />:<Header/>
         }

@@ -3,15 +3,39 @@
   justify-content: space-between;
 }
 .big{
-  width:64%;
-  float:right;
-}
+   width:64%;
+   float:right;
+ }
 .title{
-  font-family: "Open Sans";
-  font-size: 24px;
-  line-height: 1.45;
-  width:36%;
-  display: block;
+    font-family: "Open Sans";
+    font-size: 24px;
+    line-height: 1.45;
+    font-weight: normal;
+    width:36%;
+    display: block;
+  }
+.title:hover{
+  font-weight: bold;
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+  .panel{
+    flex-direction: column;
+    width: 100%;
+  }
+  .Photo{
+    width: 100% !important;
+    margin: 10px;
+  }
+  .big{
+    width: 100%;
+  }
+  .header{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .title{
+    width:100%;
+  }
 }
 .clear{
   clear: both;
