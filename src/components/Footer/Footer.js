@@ -12,6 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Footer.css';
 import Link from '../Link';
 import Aboutus from '../Aboutus';
+import Tiles from '../Tiles';
 import Forma from '../Forma';
 import Map from '../Map';
 
@@ -21,6 +22,7 @@ class Footer extends React.Component {
     return (
       <div className={s.root}>
         <Aboutus></Aboutus>
+        <Tiles></Tiles>
         <Forma></Forma>
         <Map></Map>
         
