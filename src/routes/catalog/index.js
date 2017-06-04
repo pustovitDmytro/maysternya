@@ -64,6 +64,7 @@ export default {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
+        <h2 className="title">Каталог продукції</h2>
         <Small array={images3} isFilter={true}>Внутрішнє та зовнішнє оздоблення</Small>
         <Small array={images1}>Складні архітектурні вироби</Small>
         <Small array={images2}>Садово паркове мистецтво</Small>

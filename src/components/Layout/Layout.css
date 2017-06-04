@@ -71,6 +71,11 @@ li{
   font-weight: bold;
   text-decoration: none;
 }
+:global(.title) {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  font-size: 54px;
+}
 :global(.photo) {
   cursor: pointer;
 }
