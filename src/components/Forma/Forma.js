@@ -44,6 +44,7 @@ class Forma extends React.Component {
          <textarea
           className='connect_text'
           placeholder='Ваша ідея або питання'
+          required
         ></textarea>
         <button
           className='connect_btn'

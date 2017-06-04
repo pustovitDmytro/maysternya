@@ -47,12 +47,21 @@ font-size: 1.2em;
 	margin-right: 50px;
 	margin-top: 15px;
 	padding-bottom: 5px;
+	transition: 0.5s;
 }
-
+.aboutus_choise  li:hover{
+	border-bottom: 1px solid #777785;
+	transition: 0.5s;
+}
 .aboutus_choise_a{
 	font-size: 1.2em;
 	color: #3c3c43;
 	font-weight: medium;
+	transition: 0.5s;
+}
+.aboutus_choise_a:hover{
+	color: #777785;
+	transition: 0.5s;
 }
 @media screen and (max-width: 768px){
 	.aboutus_img{
