@@ -16,12 +16,15 @@
   flex-wrap: wrap;
   padding-bottom: 50px
 }
-.map_img{
+.map_frame{
   width: 660px;
+  height: 320px;
   display: block;
 }
-.map_img img{
-  width: 100%;
+.map_frame iframe{
+  width: 660px;
+  height: 320px;
+  border:none;
 }
 .map_contact{
   width: 270px;
@@ -57,8 +60,13 @@
   color: #3c3c43;
   font-weight: 550;
   border-bottom: 1px solid #3c3c43;
+  transition: 0.5s;
 }
-
+.map_link li a:hover{
+  color: #777785;
+  border-bottom: 1px solid #777785;
+  transition: 0.5s;
+}
 @media screen and (max-width: 480px){
   .map{
   width: 92%;

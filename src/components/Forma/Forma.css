@@ -57,6 +57,15 @@
 	font-size: 1.25em;
 	width: 500px;
 	border: none;
+	border: 2px solid #4f4f4f;
+	transition: 0.5s;
+}
+.connect button:hover{
+	color: #4f4f4f;
+	border: 2px solid #4f4f4f;
+	background-color: #fff;
+	transition: 0.5s;
+	
 }
 @media screen and (max-width: 480px){
   .forma{
