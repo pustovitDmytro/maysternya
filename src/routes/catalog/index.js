@@ -10,6 +10,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Small from './Small';
+import Decor from './Decor';
 import img1 from './img/1.jpg';
 import img2 from './img/2.jpg';
 import img3 from './img/3.jpg';
@@ -34,27 +35,6 @@ const images2=[{
   alt: "big",
   link: "./catalog"
 }];
-const images3 = [{
-  src: img1,
-  alt: "Second",
-  link: "./catalog"
-},{
-  src: img3,
-  alt: "third",
-  link: "./catalog"},
-  {src: img1,
-  alt: "first",
-  link: "./catalog"
-},{
-  src: img2,
-  alt: "Second",
-  link: "./catalog"
-},{
-  src: img3,
-  alt: "third",
-  link: "./catalog"
-}
-];
 export default {
 
   path: '/catalog',
@@ -65,7 +45,7 @@ export default {
       chunk: 'catalog',
       component: <Layout>
         <h2 className="title">Каталог продукції</h2>
-        <Small array={images3} isFilter={true}>Внутрішнє та зовнішнє оздоблення</Small>
+        <Decor/>
         <Small array={images1}>Складні архітектурні вироби</Small>
         <Small array={images2}>Садово паркове мистецтво</Small>
       </Layout>,
