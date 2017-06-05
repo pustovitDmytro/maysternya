@@ -29,13 +29,13 @@
 }
 .Photo{
   width: 100%;
-  height: 266px;
+  height: 296px;
   margin-bottom: 20px;
 }
 .line{
   display: flex;
   justify-content: space-between;
-  height: 340px;
+  height: 400px;
 }
 .list{
   margin-bottom: 20px;
