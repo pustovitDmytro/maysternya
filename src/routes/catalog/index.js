@@ -11,6 +11,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Small from './Small';
 import Decor from './Decor';
+import Aboutus from './../../components/Aboutus';
 import img1 from './img/1.jpg';
 import img2 from './img/2.jpg';
 import img3 from './img/3.jpg';
@@ -48,6 +49,7 @@ export default {
         <Decor/>
         <Small array={images1}>Складні архітектурні вироби</Small>
         <Small array={images2}>Садово паркове мистецтво</Small>
+        <Aboutus/>
       </Layout>,
     };
   },
