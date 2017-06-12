@@ -25,8 +25,8 @@ class Footer extends React.Component {
         <Tiles></Tiles>
         <Forma></Forma>
         <Map></Map>
-        
-        
+
+
       </div>
     );
   }

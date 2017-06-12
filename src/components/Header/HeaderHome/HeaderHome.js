@@ -11,7 +11,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './HeaderHome.css';
 import Logo from './Logo';
-import BigMenu from '../BigMenu';
+import BigMenu from './BigMenu';
 import ShortMenu from './ShortMenu';
 import Title from './Title';
 

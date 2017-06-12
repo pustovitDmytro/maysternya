@@ -1,0 +1,85 @@
+.title{
+  display: block;
+  width: 45%;
+  font-family: 'Lora', serif;
+  font-size: 36px;
+  font-weight: bold;
+  padding:20px;
+}
+.mobile{
+  height: 80px;
+  width: 100%;
+  margin: 30px 10px;
+}
+.menu{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.up_button{
+  margin-bottom: 10px;
+}
+.down_button{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.button{
+  height: 30px;
+  width: 30px;
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+@media screen and (min-device-width: 890px){
+.mobile{
+  display: none;
+}
+}
+.up{
+  display: flex;
+  justify-content: space-around;
+  height: 133px;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.logo{
+  width: 48px;
+}
+.title{
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 10px 0 20px
+}
+.addres{
+  font-size: 16px;
+}
+.phone{
+  font-size: 24px;
+}
+.item{
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
+}
+.list{
+  list-style-type: none;
+  margin-left: 15px;
+}

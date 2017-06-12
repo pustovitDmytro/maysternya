@@ -85,14 +85,14 @@ class HomeCatalog extends React.Component {
           <Menu/>
         {
           items.filter(elem=>elem.id<3).map(elem =>
-            <Item src={elem.src} alt={elem.alt} text={elem.text}/>
+            <Item key={elem.id} src={elem.src} alt={elem.alt} text={elem.text}/>
           )
         }
         </div>
         <div className={s.line}>
           {
             items.filter(elem=>elem.id>2).map(elem =>
-              <Item src={elem.src} alt={elem.alt} text={elem.text}/>
+              <Item key={elem.id} src={elem.src} alt={elem.alt} text={elem.text}/>
             )
           }
         </div>
