@@ -2,7 +2,7 @@
   width:70%;
   margin: 25px auto;
 }
-@media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 889px) {
   .catalog{
     width: auto;
     margin: 10px 0;

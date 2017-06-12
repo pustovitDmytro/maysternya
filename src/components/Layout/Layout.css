@@ -49,7 +49,7 @@ li{
   border: 2px solid black;
   text-align: center;
   line-height: 40px;
-  color: #3c3c43;
+  color: #4f4f4f;
 }
 :global(.button:hover){
   display: block;
@@ -83,6 +83,7 @@ li{
 }
 :global(.photo:hover) {
   transform: translateY(-5px);
+  opacity: 0.8;
   transition: 0.5s;
 }
 a{

@@ -51,21 +51,23 @@
 }
 .up{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 133px;
   width: 100%;
   margin-bottom: 50px;
+  margin-left: 50px;
   margin-top: 50px;
 }
 .logo{
   width: 48px;
+  margin-right: 30px;
 }
 .title{
   font-family: 'Lora', serif;
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
-  margin: 10px 0 20px
+  margin: 0;
 }
 .addres{
   font-size: 16px;
@@ -81,5 +83,24 @@
 }
 .list{
   list-style-type: none;
-  margin-left: 15px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.footer_button{
+  width: 60%;
+  max-width: 350px;
+  margin-left: 50px;
+}
+.footer{
+  padding: 10px 50px;
+  background-color: #F9F0DD;
+}
+.vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.item{
+  margin-bottom: 5%;
 }

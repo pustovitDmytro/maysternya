@@ -26,6 +26,7 @@ class HeaderMobile extends React.Component {
             :
             <div className={s.menu}>
               <a className={cx(s.down_button,s.button)} onClick={this.showmenu.bind(this)}>&#10006;</a>
+              <div className={s.vertical}>
               <div className={s.up}>
                 <img src={logoUrl} className={s.logo}>
                 </img>
@@ -37,13 +38,14 @@ class HeaderMobile extends React.Component {
                 </div>
               </div>
               <ul className={s.list} onClick={this.showmenu.bind(this)}>
-                <li><Link to="/catalog" className={cx(s.item,"link")}>Каталог продукції</Link></li>
-                <li><Link to="/about" className={cx(s.item,"link")}>Про нас</Link></li>
-                <li><Link to="/our_works" className={cx(s.item,"link")}>Наші роботи</Link></li>
+                <li className={s.item}><Link to="/catalog" className={cx(s.item,"link")}>Каталог продукції</Link></li>
+                <li className={s.item}><Link to="/about" className={cx(s.item,"link")}>Про нас</Link></li>
+                <li className={s.item}><Link to="/our_works" className={cx(s.item,"link")}>Наші роботи</Link></li>
               </ul>
-              <footer>
+              <footer className={s.footer}>
                 <Link className={s.footer_button + " button"} to="/contact">Зв’язатись з нами</Link>
               </footer>
+              </div>
             </div>
         }
       </div>
