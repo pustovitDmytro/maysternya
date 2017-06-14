@@ -10,7 +10,9 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
+
 import HomeCatalog from './HomeCatalog';
+
 class Home extends React.Component {
 
   render() {

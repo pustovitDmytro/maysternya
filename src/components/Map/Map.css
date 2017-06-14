@@ -10,11 +10,12 @@
 
 
 .map{
-  max-width: 1100px;
+  max-width: 1920px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px
+  padding-bottom: 50px;
+  justify-content: space-around;
 }
 .map_frame{
   width: 660px;
@@ -22,8 +23,8 @@
   display: block;
 }
 .map_frame iframe{
-  width: 660px;
-  height: 320px;
+  width: 100%;
+  height: 100%;
   border:none;
 }
 .map_contact{
@@ -38,8 +39,12 @@
   font-weight: bold;
 }
 .map_contact_tel{
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #4f4f4f;
+}
+.map_contact_tel:hover{
+  border-bottom: 1px solid  #4f4f4f;
+  padding-bottom: 3px;
 }
 .map_contact_adress{
   font-size: 0.9em;
@@ -61,11 +66,15 @@
   font-weight: 550;
   border-bottom: 1px solid #3c3c43;
   transition: 0.5s;
+  transform: translateY(0);
 }
 .map_link li a:hover{
   color: #777785;
   border-bottom: 1px solid #777785;
   transition: 0.5s;
+   -ms-transform: translate(50px, 0); /* IE 9 */
+    -webkit-transform: translate(50px, 0); /* Safari */
+    transform: translate(50px, 0);
 }
 @media screen and (max-width: 480px){
   .map{
@@ -73,7 +82,7 @@
   margin: 30px auto 0;
 
 }
-.map_img{
+.map_frame{
   display: none;
 }
 .map_contact{
@@ -81,11 +90,18 @@
 }
 }
 @media screen and (max-width: 800px){
-.map_img{
-  margin: 0 auto;
-}
 .map_contact{
   margin: 5px auto;
   text-align: left;
+}
+}
+@media screen and (min-width: 1440px){
+.map_frame{
+  width: 860px;
+  height: 450px;
+  display: block;
+}
+.map_contact{
+  margin-top: 50px;
 }
 }

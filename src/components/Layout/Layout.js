@@ -30,6 +30,7 @@ class Layout extends React.Component {
           (this.props.isHome)?<HeaderHome />:<Header/>
         }
         {this.props.children}
+        <Footer/>
       </div>
     )
   }

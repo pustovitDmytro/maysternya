@@ -22,7 +22,7 @@ class Map extends React.Component {
         </div>
         <div className={s.map_contact}>
         	<h4>Контакти</h4>
-        	<p className={s.map_tel}>+38 066 445 59 00</p>
+        	<a href='#' className={s.map_contact_tel}>+38 066 445 59 00</a>
         	<p className={s.map_contact_adress}>м. Мукачево вул. Переяславська, 1</p>
    
         		<ul className={s.map_link}>
