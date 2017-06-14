@@ -10,15 +10,15 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
-import Aboutus from './../../components/Aboutus'
+
 import HomeCatalog from './HomeCatalog';
+
 class Home extends React.Component {
 
   render() {
     return (
       <HomeCatalog>
       </HomeCatalog>
-      <Aboutus/>
     );
   }
 }

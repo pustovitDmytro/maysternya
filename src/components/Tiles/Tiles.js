@@ -24,27 +24,27 @@ class Tiles extends React.Component {
          <div className={s.tiles_block}>
            <div className={s.tiles_item}>
               <img src={tilesUrl} width="320" height="320" alt="project" />
-              <p className={s.tiles_item_description}>#onyx #m-selection</p>
+              <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
            </div>
            <div className={s.tiles_item}>
             <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}>#3d #randomy</p>
+            <p className={s.tiles_item_description}><a href="#">#3d</a> &nbsp;<a href="#">#randomy</a> </p>
          </div>
          <div className={s.tiles_item}>
             <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}>#onyx #m-selection</p>
+            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
          </div>
          <div className={s.tiles_item}>
             <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}>#onyx #m-selection</p>
+            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
          </div>
          <div className={s.tiles_item}>
             <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}>#onyx #m-selection</p>
+            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
          </div>
          <div className={s.tiles_item}>
             <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}>#onyx #m-selection</p>
+            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
          </div>
         </div>
         <button className={s.tiles_btn}>Всі проекти</button>

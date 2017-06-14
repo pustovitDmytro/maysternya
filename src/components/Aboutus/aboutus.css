@@ -23,28 +23,29 @@
 .aboutus_info{
 	margin-left: 35px;
 	max-width: 720px;
+	width: 65%;
 	line-height: 1.5;
 	color: #3c3c43;
 	padding-right: 10px;
 }
 .aboutus_info p{
-font-size: 1.2em;	
+font-size: 1.2em;
+
+  line-height: 1.7;	
 }
 .aboutus_info h4{
   font-family: 'Lora';
-  font-size: 2.2em;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  font-size: 3.2em;
+  margin-bottom: 35px;
+  margin-top: 20px;
   font-weight: bold;
   color: #4f4f4f;
 }
-.aboutus_choise{
-	margin-top: 20px;
-}
+
 .aboutus_choise  li{
 	display: inline-block;
 	border-bottom: 1px solid #3c3c43;
-	margin-right: 50px;
+	margin-right: 70px;
 	margin-top: 15px;
 	padding-bottom: 5px;
 }
@@ -60,5 +61,19 @@ font-size: 1.2em;
 	max-height: 240px;
 	overflow: hidden;
 	margin: 20px auto;
+}
+.aboutus_info{
+	width: 90%;
+	margin-left: 5px;
+}
+}
+@media screen and (min-width: 1450px){
+.aboutus {
+  max-width: 1600px;
+  justify-content: space-around;
+}
+.aboutus_info{
+	max-width: 900px;
+	width: 65%;
 }
 }

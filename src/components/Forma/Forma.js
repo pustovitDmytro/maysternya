@@ -19,9 +19,10 @@ class Forma extends React.Component {
       <div className={s.forma}>
         <h3 className={s.forma_h3}>Виготовимо наступний шедевр разом</h3>
         <p className={s.forma_p}>Зв'язатися з нами та дізнайтесь більше</p>
-         <form id='forma' metod = 'POST' className={s.connect}>
+         <form id='forma' className={s.connect}>
         <input
           type='text'
+          name = 'name'
           className='connect_name'
           placeholder="Ім'я" 
           min="3"
@@ -29,6 +30,7 @@ class Forma extends React.Component {
           />
          <input
           type='text'
+          name = 'tel'
           className='connect_tel'
           placeholder='Телефон'
           title="Введіть телефон у форматі 000-000-00-00"
@@ -37,13 +39,16 @@ class Forma extends React.Component {
         />
          <input
           type='email'
+          name = 'email'
           className='connect_email'
           placeholder='E-mail'
           required
         />        
          <textarea
+          name = 'text'
           className='connect_text'
           placeholder='Ваша ідея або питання'
+          required
         ></textarea>
         <button
           className='connect_btn'

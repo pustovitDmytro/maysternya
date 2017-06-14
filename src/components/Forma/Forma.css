@@ -8,19 +8,20 @@
  */
 
 .forma{
-  max-width: 1100px;
+  max-width: 1920px;
   margin: 0 auto 160px;
 
 }
 .forma_h3{
-	font-size: 3em;
-	font-family: 'Lora';
-	text-align: center;
+	font-size: 3.5em;
+    font-family: 'Lora';
+    text-align: center;
+    letter-spacing: 2.7px;
 }
 .forma_p{
 	text-align: center;
-	padding-top: 40px;
-	padding-bottom: 50px;
+	padding-top: 12px;
+	padding-bottom: 44px;
 	font-size: 1.25em;
 	color: #000;
 }
@@ -48,6 +49,7 @@
 	height: 120px;
 	padding-left: 20px;
 	color: #4f4f4f;
+	resize: both;
 }
 .connect button{
 	color: #fff;
@@ -86,5 +88,13 @@
 .forma_p{
 	text-align: left;
 	padding-bottom: 40px;
+}
+}
+@media screen and (min-width: 1440px){
+  .connect,
+.connect textarea,
+.connect input,
+.connect button{
+	width: 700px;
 }
 }
