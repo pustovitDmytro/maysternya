@@ -12,13 +12,12 @@ import Layout from '../../components/Layout';
 import Small from './Small';
 import Decor from './Decor';
 import Aboutus from './../../components/Aboutus';
-import firstaction from './../../actions/catalog.js';
+import {park} from './../../actions/api';
 import img1 from './img/1.jpg';
 import img2 from './img/2.jpg';
 import img3 from './img/3.jpg';
 import img4 from './img/4.jpg';
-
-const images1 = [{
+let images1 = [{
   src: img1,
   alt: "first",
   link: "./catalog"
@@ -32,7 +31,7 @@ const images1 = [{
   link: "./catalog"
 }
 ];
-const images2=[{
+let images2=[{
   src: img4,
   alt: "big",
   link: "./catalog"
@@ -43,12 +42,9 @@ export default {
   path: '/catalog',
 
   async action() {
-
-    const URL = `http://maysternja.dataroot.co/catalog/park/`;
-    fetch(URL).then(r => r.json())
-      .then(data => console.log(data))
-      .catch(e => console.log("Error during request",e));
-
+    let data = [];
+    data = await park(data);
+    console.log("data",data);
     return {
       title: "Каталог Продукції",
       chunk: 'catalog',

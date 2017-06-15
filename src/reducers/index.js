@@ -8,6 +8,6 @@ export default function createRootReducer({ apolloClient }) {
     apollo: apolloClient.reducer(),
     user,
     runtime,
-    intl,
+    intl
   });
 }
