@@ -13,46 +13,26 @@ import Small from './Small';
 import Decor from './Decor';
 import Aboutus from './../../components/Aboutus';
 import {park} from './../../actions/api';
-import img1 from './img/1.jpg';
-import img2 from './img/2.jpg';
-import img3 from './img/3.jpg';
-import img4 from './img/4.jpg';
-let images1 = [{
-  src: img1,
-  alt: "first",
-  link: "./catalog"
-},{
-  src: img2,
-  alt: "Second",
-  link: "./catalog"
-},{
-  src: img3,
-  alt: "third",
-  link: "./catalog"
-}
-];
-let images2=[{
-  src: img4,
-  alt: "big",
-  link: "./catalog"
-}];
+import {architecture} from './../../actions/api';
+import {decoration} from './../../actions/api';
 
 export default {
 
   path: '/catalog',
 
   async action() {
-    let data = [];
-    data = await park(data);
-    console.log("data",data);
+    let images1=[];
+    let images2=[];
+    let images3=[];
+    await Promise.all([park,architecture,decoration]).then(values => {images1=values[0],images2=values[1],images3=values[2]});
     return {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
         <h2 className="title">Каталог продукції</h2>
-        <Decor/>
-        <Small array={images1}>Складні архітектурні вироби</Small>
-        <Small array={images2}>Садово паркове мистецтво</Small>
+        <Decor array={images3}/>
+        <Small array={images2}>Складні архітектурні вироби</Small>
+        <Small array={images1}>Садово паркове мистецтво</Small>
         <Aboutus/>
       </Layout>,
     };
