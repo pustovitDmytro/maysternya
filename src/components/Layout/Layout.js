@@ -10,12 +10,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-
-// external-global styles must be imported in your JS.
 import normalizeCss from 'normalize.css';
 import s from './Layout.css';
 import Header from '../Header';
-import Feedback from '../Feedback';
+import HeaderMobile from '../Header/HeaderMobile';
+import HeaderHome from '../Header/HeaderHome';
 import Footer from '../Footer';
 
 class Layout extends React.Component {
@@ -26,12 +25,14 @@ class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <HeaderMobile menu={false}/>
+        {
+          (this.props.isHome)?<HeaderHome />:<Header/>
+        }
         {this.props.children}
-        <Feedback />
-        <Footer />
+        <Footer/>
       </div>
-    );
+    )
   }
 }
 

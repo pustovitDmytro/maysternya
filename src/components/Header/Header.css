@@ -1,47 +1,39 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
-@import '../variables.css';
-
-:root {
-  --brand-color: #61dafb;
+.title{
+  display: block;
+  width: 30%;
+  font-family: 'Lora', serif;
+  font-size: 36px;
+  font-weight: bold;
+  padding:20px;
 }
-
-.root {
-  background: #373277;
-  color: #fff;
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 109px;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 20px 0;
-  max-width: var(--max-content-width);
+@media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+  .header{
+    display: none;
+  }
 }
-
-.brand {
-  color: color(var(--brand-color) lightness(+10%));
-  text-decoration: none;
-  font-size: 1.75em; /* ~28px */
+.addres{
+  font-size: 16px;
 }
-
-.brandTxt {
-  margin-left: 10px;
+.phone{
+  font-size: 24px;
 }
-
-.banner {
-  text-align: center;
+.lang{
+   border: none;
+   cursor: pointer;
+   background-color: transparent;
+ }
+.lang:after{
+  content: "/";
 }
-
-.bannerTitle {
-  margin: 0;
-  padding: 10px;
-  font-weight: normal;
-  font-size: 4em;
-  line-height: 1em;
+.lang:last-child:after{
+  content: " ";
+}
+.button{
+  width: 264px;
 }

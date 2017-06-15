@@ -1,0 +1,100 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+.forma{
+  max-width: 1920px;
+  margin: 0 auto 160px;
+
+}
+.forma_h3{
+	font-size: 3.5em;
+    font-family: 'Lora';
+    text-align: center;
+    letter-spacing: 2.7px;
+}
+.forma_p{
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 44px;
+	font-size: 1.25em;
+	color: #000;
+}
+.connect{
+	width: 500px;
+	margin: 0 auto;
+	display: flex;
+    flex-wrap: wrap;
+}
+.connect input{
+	height: 57px;
+	width: 500px;
+	margin-bottom: 10px;
+	border: 2px solid #4f4f4f;
+	font-weight: medium;
+	color: #4f4f4f;
+	padding-left: 20px;
+}
+.connect textarea{
+	margin-bottom: 25px;
+	padding-top: 15px;
+	border: 2px solid #4f4f4f;
+	font-weight: medium;
+	width: 500px;
+	height: 120px;
+	padding-left: 20px;
+	color: #4f4f4f;
+	resize: both;
+}
+.connect button{
+	color: #fff;
+	height: 57px;	
+	background-color: #4f4f4f;
+	font-weight: medium;
+	font-size: 1.25em;
+	width: 500px;
+	border: none;
+	border: 2px solid #4f4f4f;
+	transition: 0.5s;
+}
+.connect button:hover{
+	color: #4f4f4f;
+	border: 2px solid #4f4f4f;
+	background-color: #fff;
+	transition: 0.5s;
+	
+}
+@media screen and (max-width: 480px){
+  .forma{
+  width: 92%;
+  margin: 0 auto;
+}
+.connect,
+.connect textarea,
+.connect input,
+.connect button{
+	width: 100%;
+	margin: 10px auto;
+}
+.forma_h3{
+	text-align: left;
+	line-height: 48px;
+}
+.forma_p{
+	text-align: left;
+	padding-bottom: 40px;
+}
+}
+@media screen and (min-width: 1440px){
+  .connect,
+.connect textarea,
+.connect input,
+.connect button{
+	width: 700px;
+}
+}

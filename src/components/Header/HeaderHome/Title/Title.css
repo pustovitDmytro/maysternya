@@ -1,0 +1,27 @@
+
+.headertitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F0DD;
+  height: 409px;
+  width: 100%;
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+  .title{
+    font-size: 36px;
+    text-align: left;
+  }
+}
+@media screen and (min-device-width: 890px){
+  .title{
+  font-size: 54px;
+  text-align: center;
+}
+}
+.title{
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  padding:20px;
+}

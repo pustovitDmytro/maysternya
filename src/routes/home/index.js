@@ -12,13 +12,11 @@ import Home from './Home';
 import Layout from '../../components/Layout';
 
 export default {
-
   path: '/',
-
-  action() {
+  async action() {
     return {
-      title: 'React Starter Kit',
-      component: <Layout><Home /></Layout>,
+      title: 'Home',
+      component: <Layout isHome={true}><Home/></Layout>
     };
   },
 

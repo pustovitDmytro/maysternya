@@ -23,8 +23,7 @@ class Html extends React.Component {
       cssText: PropTypes.string.isRequired,
     }).isRequired),
     scripts: PropTypes.arrayOf(PropTypes.string.isRequired),
-    // eslint-disable-next-line react/forbid-prop-types
-    app: PropTypes.object.isRequired,
+    app: PropTypes.object, // eslint-disable-line
     children: PropTypes.string.isRequired,
   };
 
@@ -36,7 +35,7 @@ class Html extends React.Component {
   render() {
     const { title, description, styles, scripts, app, children } = this.props;
     return (
-      <html className="no-js" lang={app.lang}>
+      <html className="no-js" lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />

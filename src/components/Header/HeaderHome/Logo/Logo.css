@@ -1,0 +1,17 @@
+.headerlogo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big_logo{
+  height: 285px;
+  width: 103px;
+}
+.headline{
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+}

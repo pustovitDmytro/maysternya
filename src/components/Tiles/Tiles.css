@@ -1,0 +1,89 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+.tiles{
+  max-width: 1920px;
+  margin: 0 auto 80px;
+ text-align: center;
+}
+.tiles_h3{
+	font-size: 3em;
+	font-family: 'Lora';
+	text-align: center;
+}
+.tiles_p{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-size: 1.25em;
+	color: #000;
+}
+.tiles_block{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1100px;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.tiles_item{
+	width: 320px;
+	margin: 25px 15px;
+}
+.tiles_item img{
+	opacity: 1;
+	transition: 0.5s;
+}
+.tiles_item img:hover{
+	opacity: 0.6;
+	transition: 0.5s;
+}
+.tiles_item_description{
+	padding-top: 15px;
+	text-align: center;
+}
+.tiles_item_description a{
+	color: #3c3c43;
+}
+.tiles_item_description a:hover{
+	color: #4f4f4f;
+}
+.tiles_btn{
+	border: 2px solid #3c3c43;
+	width: 200px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fff;
+	font-size: 1.25em;
+	color: #3c3c43;
+	margin: 30px auto;
+	transition: 0.5s;
+}
+.tiles_btn:hover{
+	border: 2px solid #3c3c43;
+	background-color: #3c3c43;
+	color: #fff;
+	transition: 0.5s;
+	
+}
+@media screen and (max-width: 480px){
+  .tiles{
+  width: 92%;
+  margin: 0 auto;
+}
+
+.tiles_h3{
+	text-align: left;
+	line-height: 48px;
+}
+.tiles_p{
+	text-align: left;
+	padding-bottom: 40px;
+}
+}

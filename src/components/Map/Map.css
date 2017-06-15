@@ -1,0 +1,107 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+
+
+.map{
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  justify-content: space-around;
+}
+.map_frame{
+  width: 660px;
+  height: 320px;
+  display: block;
+}
+.map_frame iframe{
+  width: 100%;
+  height: 100%;
+  border:none;
+}
+.map_contact{
+  width: 270px;
+  margin-left: 25px; 
+  margin-top: 5px;
+}
+.map_contact h4{
+  font-family: 'Lora';
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.map_contact_tel{
+  font-size: 1.25em;
+  color: #4f4f4f;
+}
+.map_contact_tel:hover{
+  border-bottom: 1px solid  #4f4f4f;
+  padding-bottom: 3px;
+}
+.map_contact_adress{
+  font-size: 0.9em;
+  color: #4f4f4f;
+  margin-top: 5px;
+}
+
+.map_link{
+  margin-top: 50px;
+  font-size: 1.3em;
+}
+.map_link li{
+  margin-bottom: 12px;
+ }
+
+.map_link li a{
+  margin-bottom: 10px;
+  color: #3c3c43;
+  font-weight: 550;
+  border-bottom: 1px solid #3c3c43;
+  transition: 0.5s;
+  transform: translateY(0);
+}
+.map_link li a:hover{
+  color: #777785;
+  border-bottom: 1px solid #777785;
+  transition: 0.5s;
+   -ms-transform: translate(50px, 0); /* IE 9 */
+    -webkit-transform: translate(50px, 0); /* Safari */
+    transform: translate(50px, 0);
+}
+@media screen and (max-width: 480px){
+  .map{
+  width: 92%;
+  margin: 30px auto 0;
+
+}
+.map_frame{
+  display: none;
+}
+.map_contact{
+  margin-left: 0;
+}
+}
+@media screen and (max-width: 800px){
+.map_contact{
+  margin: 5px auto;
+  text-align: left;
+}
+}
+@media screen and (min-width: 1440px){
+.map_frame{
+  width: 860px;
+  height: 450px;
+  display: block;
+}
+.map_contact{
+  margin-top: 50px;
+}
+}
