@@ -2,6 +2,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './HeaderMobile.css';
 import Link from './../../Link';
+import Phone from './../../Phone';
 import logoUrl from './../HeaderHome/logo.png';
 import cx from 'classnames';
 
@@ -33,14 +34,14 @@ class HeaderMobile extends React.Component {
                 <div>
                   <h1 className={s.title}> Майстерня </h1>
                   <div></div>
-                  <p className={s.phone}>+38 066 445 59 00</p>
+                  <Phone className={s.phone}>+38 066 445 59 00</Phone>
                   <p className={s.addres}>м. Мукачево, вул. Переяславська, 1</p>
                 </div>
               </div>
               <ul className={s.list} onClick={this.showmenu.bind(this)}>
                 <li className={s.item}><Link to="/catalog" className={cx(s.item,"link")}>Каталог продукції</Link></li>
                 <li className={s.item}><Link to="/about" className={cx(s.item,"link")}>Про нас</Link></li>
-                <li className={s.item}><Link to="/our_works" className={cx(s.item,"link")}>Наші роботи</Link></li>
+                <li className={s.item}><Link to="/works" className={cx(s.item,"link")}>Наші роботи</Link></li>
               </ul>
               <footer className={s.footer}>
                 <Link className={s.footer_button + " button"} to="/contact">Зв’язатись з нами</Link>

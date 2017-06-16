@@ -43,7 +43,10 @@ let data = [];
 class Decor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {current: -1};
+    let link = this.props.context.query.type;
+    let current = Menu.findIndex(el=>el.type==link);
+    console.log(link,current);
+    if(current>=0) this.state = {current: current}; else this.state = {current: -1};
   }
   async select(i){
     await fetch(`http://maysternja.dataroot.co/catalog/decoration?type=${Menu[i].type}`).then(resp => {return resp.json()})
@@ -51,13 +54,12 @@ class Decor extends React.Component {
       .catch(e => console.log("Error during request",e));
     this.setState({current: i});
   }
+
   componentWillMount() {
     let link = this.props.context.query.type;
     let current = Menu.findIndex(el=>el.type==link);
     console.log(link,current);
     if(current>=0) this.select(current);
-    console.log(data);
-
   }
   render() {
     return (
@@ -70,7 +72,7 @@ class Decor extends React.Component {
                 <li className={s.decor_list}>Види каменю:</li>
                 {
                   Menu.map((elem,i,arr) =>
-                <li className={s.decor_list} onClick={this.select.bind(this,i)}><a href={elem.link}>{elem.name}</a></li>)
+                <li className={(i==this.state.current)?s.active:s.decor_list} onClick={this.select.bind(this,i)}><a href={elem.link}>{elem.name}</a></li>)
                 }
               </ul>
             </div>

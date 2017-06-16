@@ -11,7 +11,6 @@ export default {
       title: "Контакти",
       chunk: 'contact',
       component: <Layout>
-        <Map/>
       </Layout>,
     };
   },

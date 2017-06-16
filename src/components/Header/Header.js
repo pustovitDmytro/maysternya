@@ -12,6 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
 import cx from 'classnames';
 import Link from '../Link';
+import Phone from '../Phone';
 
 
 class Header extends React.Component {
@@ -21,7 +22,7 @@ class Header extends React.Component {
       <div className={s.header}>
         <h3 className={s.title}>Майстерня</h3>
         <div>
-          <p className={s.phone}>+38 066 445 59 00</p>
+          <Phone className={s.phone}>+38 066 445 59 00</Phone>
           <p className={s.addres}>м. Мукачево, вул. Переяславська, 1</p>
         </div>
         <Link className={cx(s.button,"button")} to="/contact">Зв’язатись з нами</Link>

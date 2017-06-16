@@ -13,6 +13,22 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Tiles.css';
 import tilesUrl from './1.jpg';
 
+class Item extends React.Component {
+
+  render(){
+    return (
+      <div className={s.tiles_item}>
+        <img src={this.props.item.img} alt={this.props.item.alt} width="320" height="320" />
+        <p className={s.tiles_item_description}>
+          {
+            this.props.item.tags.map((elem,i,arr) =>
+              <a href={"#"+elem}> {"#"+elem} </a>)
+          }
+        </p>
+      </div>
+    );
+  }
+}
 
 
 class Tiles extends React.Component {
@@ -22,30 +38,10 @@ class Tiles extends React.Component {
         <h3 className={s.tiles_h3}>Краще один раз подивитись</h3>
         <p className={s.tiles_p}>Фото проектів з нашого instagram.</p>
          <div className={s.tiles_block}>
-           <div className={s.tiles_item}>
-              <img src={tilesUrl} width="320" height="320" alt="project" />
-              <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
-           </div>
-           <div className={s.tiles_item}>
-            <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}><a href="#">#3d</a> &nbsp;<a href="#">#randomy</a> </p>
-         </div>
-         <div className={s.tiles_item}>
-            <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
-         </div>
-         <div className={s.tiles_item}>
-            <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
-         </div>
-         <div className={s.tiles_item}>
-            <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
-         </div>
-         <div className={s.tiles_item}>
-            <img src={tilesUrl} width="320" height="320" alt="project" />
-            <p className={s.tiles_item_description}><a href="#">#onyx</a> &nbsp;<a href="#">#m-selection</a></p>
-         </div>
+           {
+             this.props.source.map((elem,i,arr) =>
+               <Item item={elem}></Item>)
+           }
         </div>
         <button className={s.tiles_btn}>Всі проекти</button>
       </div>

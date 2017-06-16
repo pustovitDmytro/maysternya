@@ -10,13 +10,17 @@
 import React from 'react';
 import Home from './Home';
 import Layout from '../../components/Layout';
+import {instagram} from './../../actions/api';
 
 export default {
   path: '/',
   async action() {
+    let images=[];
+    await Promise.all([instagram]).then(values => {images=values[0]})
+      .catch(e => console.log("Error during catalog request",e));
     return {
       title: 'Home',
-      component: <Layout isHome={true}><Home/></Layout>
+      component: <Layout isHome={true}><Home source = {images}/></Layout>
     };
   },
 

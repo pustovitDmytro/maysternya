@@ -1,19 +1,13 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Logo.css';
-import logoUrl from '../logo.png';
+import s from './Phone.css';
 
-class Logo extends React.Component {
+class Phone extends React.Component {
   render() {
     return (
-      <div className={s.headerlogo}>
-        <img src={logoUrl} className={s.big_logo}>
-        </img>
-        <h1 className={s.headline}>Майстерня
-        </h1>
-      </div>
+      <a className={s.phone} href={"tel:"+this.props.children}>{this.props.children}</a>
     );
   }
 }
 
-export default withStyles(s)(Logo);
+export default withStyles(s)(Phone);
