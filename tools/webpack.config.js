@@ -73,6 +73,7 @@ const config = {
             // Adds __self attribute to JSX which React will use for some warnings
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx-self
             ...isDebug ? ['transform-react-jsx-self'] : [],
+            'react-intl',
           ],
         },
       },
@@ -137,10 +138,6 @@ const config = {
         loader: path.resolve(__dirname, './lib/markdown-loader.js'),
       },
       {
-        test: /\.less$/,
-        loader: "css-loader!less-loader",
-      },
-      {
         test: /\.txt$/,
         loader: 'raw-loader',
       },
@@ -158,6 +155,11 @@ const config = {
           name: isDebug ? '[path][name].[ext]?[hash:8]' : '[hash:8].[ext]',
           limit: 10000,
         },
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
       },
 
       // Exclude dev modules from production build
@@ -203,7 +205,7 @@ const clientConfig = {
   target: 'web',
 
   entry: {
-    client: ['babel-polyfill', './src/client.js'],
+    client: ['babel-polyfill', './src/clientLoader.js'],
   },
 
   output: {

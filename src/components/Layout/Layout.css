@@ -46,7 +46,7 @@ li{
 :global(.button){
   display: block;
   text-decoration: none;
-  border: 2px solid black;
+  border: 2px solid #4f4f4f;
   text-align: center;
   line-height: 40px;
   color: #4f4f4f;
@@ -55,7 +55,7 @@ li{
   display: block;
   text-decoration: none;
   border: 2px solid white;
-  background-color: black;
+  background-color: #4f4f4f;
   text-align: center;
   line-height: 40px;
   color: white;
@@ -70,7 +70,7 @@ li{
 }
 :global(.link:hover) {
   color: #777785;
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   transition: 0.5s;
 }
 :global(.title) {
@@ -82,7 +82,7 @@ li{
   cursor: pointer;
 }
 :global(.photo:hover) {
-  transform: translateY(-5px);
+  transform: translateY(-1px);
   opacity: 0.8;
   transition: 0.5s;
 }

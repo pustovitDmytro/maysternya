@@ -27,14 +27,14 @@ class Filter extends React.Component {
   }
 }
 
-class Panel extends React.Component {
+export class Panel extends React.Component {
   render() {
     return (
       <div>
       <div className={s.panel}>
         {
           this.props.source.map((elem,i,arr) =>
-            <img className={cx(s.Photo,"photo")} src={elem.src} alt={elem.alt} style={{width:elemW(arr.length,i)+"%"}}/>
+            <img className={cx(s.Photo,"photo")} src={elem.img} alt={elem.alt} style={{width:elemW(arr.length,i)+"%"}}/>
           )
         }
       </div>
