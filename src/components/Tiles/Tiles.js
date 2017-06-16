@@ -11,7 +11,6 @@ import React from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Tiles.css';
-import tilesUrl from './1.jpg';
 
 class Item extends React.Component {
 
@@ -22,15 +21,13 @@ class Item extends React.Component {
         <p className={s.tiles_item_description}>
           {
             this.props.item.tags.map((elem,i,arr) =>
-              <a href={"#"+elem}> {"#"+elem} </a>)
+              <a key={i} href={"#"+elem}> {"#"+elem} </a>)
           }
         </p>
       </div>
     );
   }
 }
-
-
 class Tiles extends React.Component {
   render() {
     return (
@@ -40,7 +37,7 @@ class Tiles extends React.Component {
          <div className={s.tiles_block}>
            {
              this.props.source.map((elem,i,arr) =>
-               <Item item={elem}></Item>)
+               <Item key={i} item={elem}></Item>)
            }
         </div>
         <button className={s.tiles_btn}>Всі проекти</button>

@@ -58,7 +58,7 @@ class Decor extends React.Component {
   componentWillMount() {
     let link = this.props.context.query.type;
     let current = Menu.findIndex(el=>el.type==link);
-    console.log(link,current);
+    //console.log(link,current);
     if(current>=0) this.select(current);
   }
   render() {
@@ -72,7 +72,7 @@ class Decor extends React.Component {
                 <li className={s.decor_list}>Види каменю:</li>
                 {
                   Menu.map((elem,i,arr) =>
-                <li className={(i==this.state.current)?s.active:s.decor_list} onClick={this.select.bind(this,i)}><a href={elem.link}>{elem.name}</a></li>)
+                <li key={i} className={(i==this.state.current)?s.active:s.decor_list} onClick={this.select.bind(this,i)}><a href={elem.link}>{elem.name}</a></li>)
                 }
               </ul>
             </div>
