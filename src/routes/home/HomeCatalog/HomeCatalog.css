@@ -39,6 +39,7 @@
 }
 .list{
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .list:hover{
   font-weight: bold;
