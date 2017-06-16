@@ -20,17 +20,19 @@ export default {
 
   path: '/catalog',
 
-  async action() {
+  async action(context) {
     let images1=[];
     let images2=[];
     let images3=[];
-    await Promise.all([park,architecture,decoration]).then(values => {images1=values[0],images2=values[1],images3=values[2]});
+    await Promise.all([park,architecture,decoration]).then(values => {images1=values[0],images2=values[1],images3=values[2]})
+      .catch(e => console.log("Error during catalog request",e));
+    console.log(context.params);
     return {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
         <h2 className="title">Каталог продукції</h2>
-        <Decor array={images3}/>
+        <Decor array={images3} context={context}/>
         <Small array={images2}>Складні архітектурні вироби</Small>
         <Small array={images1}>Садово паркове мистецтво</Small>
         <Aboutus/>

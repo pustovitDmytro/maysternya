@@ -27,7 +27,7 @@ class Filter extends React.Component {
   }
 }
 
-class Panel extends React.Component {
+export class Panel extends React.Component {
   render() {
     return (
       <div>

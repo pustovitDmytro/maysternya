@@ -1,24 +1,64 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Decor.css';
-import decorUrl1 from './1.jpg';
-import decorUrl2 from './2.jpg';
-import decorUrl3 from './3.jpg';
-import decorUrl4 from './4.jpg';
-import decorUrl5 from './5.jpg';
+import Panel from './../Panel';
 
+const Menu = [{name:"мармур", link:"/catalog?type=marble" ,type: "marble"},
+  {name:"граніт", link:"/catalog?type=granite", type: "granite"},
+  {name:"пісковик", link:"/catalog?type=sandstone", type: "sandstone"},
+  {name:"вапняк", link:"/catalog?type=limestone", type: "limestone"},
+  {name:"квацит", link:"/catalog?type=quartzite", type: "quartzite"},
+  {name:"онікс", link:"/catalog?type=onyx", type: "onyx"} ];
+
+class RichImg extends React.Component {
+  render() {
+    return (
+      <img src={this.props.item.img} alt = {this.props.item.alt}/>
+    );
+  }
+}
+
+class All extends React.Component {
+  render() {
+    return (
+      <div className={s.decor_imgBlock}>
+        <div className={s.decor_imgBig}><RichImg item={this.props.array[0]}/></div>
+        <div className={s.decor_item}>
+          <div className={s.decor_item_block}>
+            <div className={s.decor_img}><RichImg item={this.props.array[1]}/></div>
+            <div className={s.decor_img}><RichImg item={this.props.array[2]}/></div>
+          </div>
+          <div className={s.decor_item_block}>
+            <div className={s.decor_img}><RichImg item={this.props.array[3]}/></div>
+            <div className={s.decor_img}><RichImg item={this.props.array[4]}/></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+let data = [];
 
 class Decor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {current: -1};
+  }
+  async select(i){
+    await fetch(`http://maysternja.dataroot.co/catalog/decoration?type=${Menu[i].type}`).then(resp => {return resp.json()})
+      .then(d => data=d)
+      .catch(e => console.log("Error during request",e));
+    this.setState({current: i});
+  }
+  componentWillMount() {
+    let link = this.props.context.query.type;
+    let current = Menu.findIndex(el=>el.type==link);
+    console.log(link,current);
+    if(current>=0) this.select(current);
+    console.log(data);
+
+  }
   render() {
     return (
       <div className={s.decor}>
@@ -28,27 +68,15 @@ class Decor extends React.Component {
             <div className={s.decor_tab}>
               <ul className={s.decor_menu}>
                 <li className={s.decor_list}>Види каменю:</li>
-                <li className={s.decor_list}><a href="#">мармур</a></li>
-                <li className={s.decor_list}><a href="#">граніт</a></li>
-                <li className={s.decor_list}><a href="#">пісковик</a></li>
-                <li className={s.decor_list}><a href="#">вапняк</a></li>
-                <li className={s.decor_list}><a href="#">квацит</a></li>
-                <li className={s.decor_list}><a href="#">онікс</a></li>
+                {
+                  Menu.map((elem,i,arr) =>
+                <li className={s.decor_list} onClick={this.select.bind(this,i)}><a href={elem.link}>{elem.name}</a></li>)
+                }
               </ul>
             </div>
-            <div className={s.decor_imgBlock}>
-              <div className={s.decor_imgBig}><img src={decorUrl1}/></div>
-              <div className={s.decor_item}>
-                <div className={s.decor_item_block}>
-                  <div className={s.decor_img}><img src={decorUrl2}/></div>
-                  <div className={s.decor_img}><img src={decorUrl3}/></div>
-                </div>
-              <div className={s.decor_item_block}>
-                  <div className={s.decor_img}><img src={decorUrl4}/></div>
-                  <div className={s.decor_img}><img src={decorUrl5}/></div>
-              </div>
-              </div>
-            </div>
+          {(this.state.current==-1)?
+            <All array={this.props.array}></All>:<Panel source={data}/>
+          }
         </div>
       </div>
     );
