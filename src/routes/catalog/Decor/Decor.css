@@ -89,6 +89,21 @@
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 1300px){
+.decor_img{
+  height: 200px;
+  width: 300px;
+  margin: 0 15px 15px 0;
+  overflow: hidden;
+}
+
+.decor_imgBig{
+  min-width: 260px;
+  height: 420px;
+}
+
+
+}
 @media screen and (max-width: 1024px){
   .decor_img{
     height: 160px;
@@ -115,7 +130,7 @@
     flex-wrap: wrap;
   }
   .decor_imgBig{
-    width: 95%;
+    width: 98%;
     margin: 0 auto;
   }
   .decor_item_block{
@@ -123,7 +138,7 @@
     margin: 0 auto;
   }
   .decor_img{
-    width: 95%;
+    width: 98%;
     margin: 20px auto;
     height: auto;
   }

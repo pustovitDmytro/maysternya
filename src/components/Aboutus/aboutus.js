@@ -38,8 +38,8 @@ class Aboutus extends React.Component {
         нашої роботи та дотримання термінів виконання.
         </p><br/>
         <ul className={s.aboutus_choise}>
-            <li><a className={s.aboutus_choise_a} href='#'>Детальніше</a></li>
-            <li><a className={s.aboutus_choise_a} href='#'>Переглянути роботи</a></li>
+            <li><a className={s.aboutus_choise_a} href='/about'>Детальніше</a></li>
+            <li><a className={s.aboutus_choise_a} href='/works'>Переглянути роботи</a></li>
         </ul>
         </div>
       </div>

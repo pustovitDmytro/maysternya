@@ -26,9 +26,9 @@ class Map extends React.Component {
         	<p className={s.map_contact_adress}>м. Мукачево вул. Переяславська, 1</p>
    
         		<ul className={s.map_link}>
-        			<li><a href='#'>Каталог продукції</a></li>
-        			<li><a href='#'>Про нас</a></li>
-        			<li><a href='#'>Наші роботи</a></li>
+        			<li><a href='/catalog'>Каталог продукції</a></li>
+        			<li><a href='/about'>Про нас</a></li>
+        			<li><a href='/works'>Наші роботи</a></li>
         		</ul>
  
         </div>

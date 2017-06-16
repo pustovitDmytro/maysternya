@@ -48,6 +48,10 @@ font-size: 1.2em;
 	margin-right: 70px;
 	margin-top: 15px;
 	padding-bottom: 5px;
+	opacity: 1;
+}
+.aboutus_choise  li:hover{
+	opacity: 0.4;
 }
 
 .aboutus_choise_a{
@@ -55,6 +59,7 @@ font-size: 1.2em;
 	color: #3c3c43;
 	font-weight: medium;
 }
+
 @media screen and (max-width: 768px){
 	.aboutus_img{
 	max-width: 360px;
