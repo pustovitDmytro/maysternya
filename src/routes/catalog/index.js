@@ -15,18 +15,20 @@ import Aboutus from './../../components/Aboutus';
 import {park} from './../../actions/api';
 import {architecture} from './../../actions/api';
 import {decoration} from './../../actions/api';
+import {aboutUs} from './../../actions/api';
 
 export default {
 
   path: '/catalog',
 
   async action(context) {
+    let store = context.store;
     let images1=[];
     let images2=[];
     let images3=[];
-    await Promise.all([park,architecture,decoration]).then(values => {images1=values[0],images2=values[1],images3=values[2]})
+    await Promise.all([park,architecture,decoration,aboutUs(store.dispatch)]).then(values => {images1=values[0];images2=values[1];images3=values[2]})
       .catch(e => console.log("Error during catalog request",e));
-    console.log(context.params);
+    //console.log(images1,images2,images3);
     return {
       title: "Каталог Продукції",
       chunk: 'catalog',
@@ -35,7 +37,7 @@ export default {
         <Decor array={images3} context={context}/>
         <Small array={images2}>Складні архітектурні вироби</Small>
         <Small array={images1}>Садово паркове мистецтво</Small>
-        <Aboutus/>
+        <Aboutus source = {store.getState().HomeData.about}/>
       </Layout>,
     };
   },

@@ -65,9 +65,9 @@ class Menu extends React.Component {
     return (
       <div className={s.menu}>
         <nav className={s.catalogMenu}>
-        <li className={s.list}>Внутрішнє та зовнішнє оздоблення</li>
-        <li className={s.list}>Складні архітектурні вироби</li>
-        <li className={s.list}>Садово паркове мистецтво</li>
+          <Link to="/catalog"><li className={s.list}>Внутрішнє та зовнішнє оздоблення</li></Link>
+          <Link to="/catalog"><li className={s.list}>Складні архітектурні вироби</li></Link>
+          <Link to="/catalog"><li className={s.list}>Садово паркове мистецтво</li></Link>
         </nav>
         <Link to="/catalog" className={cx(s.button,"button")}>Каталог</Link>
       </div>

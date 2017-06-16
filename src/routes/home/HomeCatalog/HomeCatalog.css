@@ -46,10 +46,11 @@
 }
 .button{
   width:85%;
+  margin-bottom: 35px;
 }
 
 .title{
-  width: 100%;
+  width: 70%;
   font-family: 'Lora', serif;
   font-weight: bold;
   font-size: 54px;

@@ -10,16 +10,20 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Aboutus from '../../components/Aboutus';
+import {aboutUs} from './../../actions/api';
 export default {
 
   path: '/about',
 
-  async action() {
+  async action(context) {
+    let store = context.store;
+    await Promise.all([aboutUs(store.dispatch)]).then(values => console.log("success",values.length))
+      .catch(e => console.log("Error during request",e));
     return {
       title: "Про нас",
       chunk: 'about',
       component: <Layout>
-        <Aboutus/>
+        <Aboutus source = {store.getState().HomeData.about}/>
       </Layout>,
     };
   },

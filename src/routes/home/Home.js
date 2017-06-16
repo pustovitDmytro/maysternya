@@ -22,8 +22,8 @@ class Home extends React.Component {
       <div>
       <HomeCatalog>
       </HomeCatalog>
-      <Aboutus/>
-      <Tiles source = {this.props.source}/>
+      <Aboutus source = {this.props.source.about}/>
+      <Tiles source = {this.props.source.works}/>
       </div>
     );
   }

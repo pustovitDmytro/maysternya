@@ -7,36 +7,22 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-// import React from 'react';
-// import withStyles from 'isomorphic-style-loader/lib/withStyles';
-// import s from './aboutus.css';
-// import aboutUrl from './about.jpg';
 
 import React from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './aboutus.css';
-import aboutUrl from './about.jpg';
-
 
 class Aboutus extends React.Component {
   render() {
     return (
       <div className={s.aboutus}>
         <div className={s.aboutus_img}>
-        	<img src={aboutUrl} width="440" height="535" alt="About us" />
+        	<img src={this.props.source.img} width="440" height="535" alt="About us" />
         </div>
         <div className={s.aboutus_info}>
-        <h4>Про нас</h4>
-        <p>Майстерня – це місце, де ваша ідея реалізовується з натурального каменю. 
-        Вже більше 5 років ми створюємо унікальні дизайн-проекти для приватних і громадських інтер'єрів.
-        </p><br/>
-        <p>Ми пропонуємо різні варіанти співпраці, серед яких створення дизайн-проектів будь-якої складності, їх авторський супровід та повна реалізація, художнє оформлення інтер'єрів,
-        а також їх доставку та послуги монтування.
-        </p><br/>
-        <p>Найважливіше для нас – ваше естетичне задоволення, тож ми гарантуємо якість 
-        нашої роботи та дотримання термінів виконання.
-        </p><br/>
+        <h4>{this.props.source.title}</h4>
+          {React.DOM.div({dangerouslySetInnerHTML: {__html: this.props.source.content}})}
         <ul className={s.aboutus_choise}>
             <li><a className={s.aboutus_choise_a} href='/about'>Детальніше</a></li>
             <li><a className={s.aboutus_choise_a} href='/works'>Переглянути роботи</a></li>

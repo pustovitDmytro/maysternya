@@ -45,7 +45,7 @@ class Decor extends React.Component {
     super(props);
     let link = this.props.context.query.type;
     let current = Menu.findIndex(el=>el.type==link);
-    console.log(link,current);
+    //console.log(link,current);
     if(current>=0) this.state = {current: current}; else this.state = {current: -1};
   }
   async select(i){

@@ -44,7 +44,7 @@ class HeaderMobile extends React.Component {
                 <li className={s.item}><Link to="/works" className={cx(s.item,"link")}>Наші роботи</Link></li>
               </ul>
               <footer className={s.footer}>
-                <Link className={s.footer_button + " button"} to="/contact">Зв’язатись з нами</Link>
+                <div onClick={this.showmenu.bind(this)}><Link className={s.footer_button + " button"} to="/contact">Зв’язатись з нами</Link></div>
               </footer>
               </div>
             </div>
