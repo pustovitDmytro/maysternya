@@ -54,7 +54,7 @@ class Item extends React.Component {
   render() {
     return (
       <div className={s.item}>
-        <img src={this.props.src} alt={this.props.alt} className={cx(s.Photo,"photo")}/>
+        <Link to="/catalog"> <img src={this.props.src} alt={this.props.alt} className={cx(s.Photo,"photo")}/></Link>
         <Link to="/catalog" className="link">{this.props.text}</Link>
       </div>
     );

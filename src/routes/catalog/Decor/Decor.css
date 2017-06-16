@@ -1,6 +1,6 @@
 .decor{
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
