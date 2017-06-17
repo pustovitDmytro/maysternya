@@ -15,7 +15,7 @@ import s from './aboutus.css';
 
 class Aboutus extends React.Component {
   render() {
-    if(!this.props.source.length) return (<div>Unable to load data</div>);
+    if(!this.props.source) return (<div>Unable to load data</div>);
     return (
       <div className={s.aboutus}>
         <div className={s.aboutus_img}>

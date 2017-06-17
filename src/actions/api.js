@@ -4,10 +4,10 @@
 export const park =(dispatch)=> fetch(`http://maysternja.dataroot.co/catalog/park/`)
   .then(resp => resp.json())
   .then(payload => dispatch({
-    type: "WORKS",
+    type: "PARK",
     payload: payload,}))
   .catch(error => {dispatch({
-    type: "WORKS",
+    type: "PARK",
     payload: [],});
     console.log(error)});
 export const architecture =(dispatch)=> fetch(`http://maysternja.dataroot.co/catalog/architecture/`)
@@ -44,5 +44,5 @@ export const aboutUs =(dispatch)=> fetch(`http://maysternja.dataroot.co/about/`)
       payload: payload,}))
   .catch(error => {dispatch({
     type: "ABOUT",
-    payload: [],});
+    payload: false,});
     console.log(error)});
