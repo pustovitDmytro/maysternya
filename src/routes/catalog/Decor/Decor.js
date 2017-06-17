@@ -21,6 +21,7 @@ class RichImg extends React.Component {
 
 class All extends React.Component {
   render() {
+    if(!this.props.array.length) return (<div>Unable to load data</div>)
     return (
       <div className={s.decor_imgBlock}>
         <div className={s.decor_imgBig}><RichImg item={this.props.array[0]}/></div>

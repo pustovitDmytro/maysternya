@@ -23,20 +23,18 @@ export default {
 
   async action(context) {
     let store = context.store;
-    let images1=[];
-    let images2=[];
-    let images3=[];
-    await Promise.all([park,architecture,decoration,aboutUs(store.dispatch)]).then(values => {images1=values[0];images2=values[1];images3=values[2]})
+    await Promise.all([park(store.dispatch),architecture(store.dispatch),decoration(store.dispatch),aboutUs(store.dispatch)])
+      .then(values => console.log("success"))
       .catch(e => console.log("Error during catalog request",e));
-    //console.log(images1,images2,images3);
+    console.log(store.getState().CatalogData);
     return {
       title: "Каталог Продукції",
       chunk: 'catalog',
       component: <Layout>
         <h2 className="title">Каталог продукції</h2>
-        <Decor array={images3} context={context}/>
-        <Small array={images2}>Складні архітектурні вироби</Small>
-        <Small array={images1}>Садово паркове мистецтво</Small>
+        <Decor array={store.getState().CatalogData.decor} context={context}/>
+        <Small array={store.getState().CatalogData.architecture}>Складні архітектурні вироби</Small>
+        <Small array={store.getState().CatalogData.park}>Садово паркове мистецтво</Small>
         <Aboutus source = {store.getState().HomeData.about}/>
       </Layout>,
     };

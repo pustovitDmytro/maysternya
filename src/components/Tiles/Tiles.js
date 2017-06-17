@@ -30,6 +30,7 @@ class Item extends React.Component {
 }
 class Tiles extends React.Component {
   render() {
+    if(!this.props.source.length) return (<div>Unable to load data</div>);
     return (
       <div className={s.tiles}>
         <h3 className={s.tiles_h3}>Краще один раз подивитись</h3>

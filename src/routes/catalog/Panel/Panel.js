@@ -12,6 +12,7 @@ let elemW = function(n,i, prob=0.05,kof=1.3){
 
 class Panel extends React.Component {
   render() {
+    if(!this.props.source.length) return (<div>Unable to load data</div>);
     return (
       <div>
       <div className={s.panel}>
