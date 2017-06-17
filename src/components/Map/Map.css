@@ -45,6 +45,7 @@
 .map_contact_tel:hover{
   border-bottom: 1px solid  #4f4f4f;
   padding-bottom: 3px;
+  transition: 0.5s;
 }
 .map_contact_adress{
   font-size: 0.9em;
@@ -58,6 +59,12 @@
 }
 .map_link li{
   margin-bottom: 12px;
+  transition: 0.5s;
+ }
+.map_link li:hover{
+  margin-bottom: 12px;
+  transform: translateY(-4px);
+  transition: 0.5s;
  }
 
 .map_link li a{
@@ -66,15 +73,13 @@
   font-weight: 550;
   border-bottom: 1px solid #3c3c43;
   transition: 0.5s;
-  transform: translateY(0);
+  
 }
 .map_link li a:hover{
   color: #777785;
   border-bottom: 1px solid #777785;
   transition: 0.5s;
-   -ms-transform: translate(50px, 0); /* IE 9 */
-    -webkit-transform: translate(50px, 0); /* Safari */
-    transform: translate(50px, 0);
+ 
 }
 @media screen and (max-width: 480px){
   .map{

@@ -49,9 +49,12 @@
 }
 .tiles_item_description a{
 	color: #3c3c43;
+	border-bottom: none;
+	transition: 0.5s;
 }
 .tiles_item_description a:hover{
-	color: #4f4f4f;
+	border-bottom: 1px solid #3c3c43;
+	transition: 0.5s;
 }
 .tiles_btn{
 	border: 2px solid #3c3c43;

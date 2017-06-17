@@ -43,6 +43,9 @@ body{
 li{
   list-style-type: none;
 }
+nav{
+  width: 260px;
+}
 :global(.button){
   display: block;
   text-decoration: none;
@@ -54,7 +57,7 @@ li{
 :global(.button:hover){
   display: block;
   text-decoration: none;
-  border: 2px solid white;
+  border: 2px solid #4f4f4f;
   background-color: #4f4f4f;
   text-align: center;
   line-height: 40px;
@@ -66,12 +69,14 @@ li{
   text-decoration: underline;
   font-size: 20px;
   line-height: 1.5;
-  color: black;
+  color: #3c3c43;
+  padding-bottom: 4px;
 }
 :global(.link:hover) {
   color: #777785;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
   transition: 0.5s;
+  padding-bottom: 4px;
 }
 :global(.title) {
   font-family: 'Lora', serif;
@@ -82,8 +87,8 @@ li{
   cursor: pointer;
 }
 :global(.photo:hover) {
-  transform: translateY(-1px);
-  opacity: 0.8;
+  transform: translateY(-3px);
+  opacity: 0.6;
   transition: 0.5s;
 }
 a{
